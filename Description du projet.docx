@@ -1,0 +1,56 @@
+Chapitre 3: Description du projet
+Cette partie décrit de façon détaillée le projet : sa formulation, ses objectifs, les besoins des utilisateurs, les matériels nécessaires pour la réalisation du projet et les résultats attendus.
+
+3.1. Formulation
+Le présent projet consiste en la conception et la réalisation d'une plateforme web de gestion de parc automobile pour optimiser le suivi des ressources matérielles et humaines d'une organisation. En collaboration avec les parties prenantes, nous avons défini un système permettant de centraliser les données relatives aux véhicules, aux conducteurs, aux dépenses en carburant et à la maintenance technique. L'application mise sur une interface intuitive pour assurer une gestion fluide des missions et une traçabilité rigoureuse des coûts opérationnels, garantissant ainsi la pérennité et la sécurité du parc automobile.
+
+3.2. Objectif et besoins de l'utilisateur
+La concrétisation de ce projet nécessite une définition précise des objectifs stratégiques et des attentes fonctionnelles des futurs utilisateurs.
+
+3.2.1. Objectifs
+L'objectif principal est de fournir un outil d'aide à la décision permettant de :
+
+Suivre en temps réel l'état et la disponibilité des véhicules et des chauffeurs.
+
+Contrôler les dépenses liées à la consommation de carburant et aux entretiens mécaniques.
+
+Planifier et historiser les missions de transport pour une meilleure organisation logistique.
+
+3.2.2. Besoins de l'utilisateur
+Le futur système est structuré autour de plusieurs profils d'utilisateurs :
+
+ Le système doit permettre aux Administrateurs de :
+
+Gérer les comptes d'accès via une authentification sécurisée (email et mot de passe).
+
+Enregistrer et mettre à jour les informations du parc automobile (immatriculation, marque, modèle, année et kilométrage).
+
+Gérer la liste des chauffeurs et leur statut de disponibilité.
+
+Paramétrer les stations-service partenaires pour le ravitaillement.
+
+Superviser l'ensemble des jetons d'accès personnels pour la sécurité de l'API.
+
+ Le système doit permettre au Gestionnaire de Parc / Logistique de :
+
+Affecter des missions spécifiques à un binôme chauffeur-véhicule en précisant l'objet, le client et l'itinéraire (départ/arrivée).
+
+Enregistrer les consommations de carburant, incluant le type de produit (essence/gasoil), la quantité, le prix et le scan du reçu pour justificatif.
+
+Suivre les interventions de maintenance en précisant le garage, la description des travaux et le coût total de l'entretien.
+
+Consulter l'historique complet des déplacements et le kilométrage parcouru par chaque véhicule.
+
+3.3. Matériels et technologies nécessaires
+Serveur de base de données : MySQL / MariaDB pour le stockage structuré des données.
+
+Environnement de développement : Framework PHP (Laravel suggéré par la structure des tables migrations et failed_jobs).
+
+Outils de gestion : phpMyAdmin ou HeidiSQL pour l'administration de la base de données.
+
+3.4. Résultats attendus
+Une réduction significative des erreurs de saisie manuelle et des pertes de documents (reçus de carburant numérisés).
+
+Une visibilité claire sur les coûts de maintenance par véhicule pour anticiper les renouvellements de parc.
+
+Une amélioration de la réactivité dans l'attribution des missions grâce au suivi en temps réel du statut des chauffeurs et véhicules.
