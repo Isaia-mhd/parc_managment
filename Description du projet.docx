@@ -1,56 +1,52 @@
-Chapitre 3: Description du projet
-Cette partie décrit de façon détaillée le projet : sa formulation, ses objectifs, les besoins des utilisateurs, les matériels nécessaires pour la réalisation du projet et les résultats attendus.
-
+Chapitre 3 : Description du projet
+Cette partie décrit de manière détaillée le projet, sa formulation, ses objectifs, les besoins des utilisateurs, les matériels et technologies nécessaires à sa réalisation, ainsi que les résultats attendus.
 3.1. Formulation
-Le présent projet consiste en la conception et la réalisation d'une plateforme web de gestion de parc automobile pour optimiser le suivi des ressources matérielles et humaines d'une organisation. En collaboration avec les parties prenantes, nous avons défini un système permettant de centraliser les données relatives aux véhicules, aux conducteurs, aux dépenses en carburant et à la maintenance technique. L'application mise sur une interface intuitive pour assurer une gestion fluide des missions et une traçabilité rigoureuse des coûts opérationnels, garantissant ainsi la pérennité et la sécurité du parc automobile.
+Le présent projet consiste en la conception et la réalisation d’une plateforme web de gestion du parc automobile Mandrindra, basée sur une architecture moderne Frontend / Backend.
+Le système vise à optimiser le suivi des ressources matérielles et humaines du parc Mandrindra à travers une application web développée avec React pour la partie Frontend et Laravel pour la partie Backend sous forme d’API RESTful.
+En collaboration avec les parties prenantes, un système a été défini afin de centraliser les données relatives aux véhicules, aux chauffeurs, aux consommations de carburant et aux opérations de maintenance du parc Mandrindra.
+L’application met l’accent sur une interface utilisateur ergonomique et réactive, permettant une gestion fluide des missions de transport et assurant une traçabilité rigoureuse des coûts opérationnels, contribuant ainsi à la pérennité, à la sécurité et à l’optimisation du parc automobile Mandrindra.
 
-3.2. Objectif et besoins de l'utilisateur
-La concrétisation de ce projet nécessite une définition précise des objectifs stratégiques et des attentes fonctionnelles des futurs utilisateurs.
-
+3.2. Objectifs et besoins de l’utilisateur
+La réussite de ce projet repose sur la définition claire des objectifs fonctionnels et des besoins des différents profils d’utilisateurs intervenant dans la gestion du parc Mandrindra.
 3.2.1. Objectifs
-L'objectif principal est de fournir un outil d'aide à la décision permettant de :
+L’objectif principal du système est de fournir un outil d’aide à la décision permettant de :
+    • Suivre en temps réel l’état, la disponibilité et l’affectation des véhicules et des chauffeurs du parc Mandrindra ;
+    • Contrôler et analyser les dépenses liées à la consommation de carburant et aux opérations de maintenance ;
+    • Planifier, gérer et historiser les missions de transport afin d’améliorer l’organisation logistique et la performance opérationnelle du parc Mandrindra.
 
-Suivre en temps réel l'état et la disponibilité des véhicules et des chauffeurs.
-
-Contrôler les dépenses liées à la consommation de carburant et aux entretiens mécaniques.
-
-Planifier et historiser les missions de transport pour une meilleure organisation logistique.
-
-3.2.2. Besoins de l'utilisateur
-Le futur système est structuré autour de plusieurs profils d'utilisateurs :
-
- Le système doit permettre aux Administrateurs de :
-
-Gérer les comptes d'accès via une authentification sécurisée (email et mot de passe).
-
-Enregistrer et mettre à jour les informations du parc automobile (immatriculation, marque, modèle, année et kilométrage).
-
-Gérer la liste des chauffeurs et leur statut de disponibilité.
-
-Paramétrer les stations-service partenaires pour le ravitaillement.
-
-Superviser l'ensemble des jetons d'accès personnels pour la sécurité de l'API.
-
- Le système doit permettre au Gestionnaire de Parc / Logistique de :
-
-Affecter des missions spécifiques à un binôme chauffeur-véhicule en précisant l'objet, le client et l'itinéraire (départ/arrivée).
-
-Enregistrer les consommations de carburant, incluant le type de produit (essence/gasoil), la quantité, le prix et le scan du reçu pour justificatif.
-
-Suivre les interventions de maintenance en précisant le garage, la description des travaux et le coût total de l'entretien.
-
-Consulter l'historique complet des déplacements et le kilométrage parcouru par chaque véhicule.
+3.2.2. Besoins de l’utilisateur
+Le système est conçu pour répondre aux besoins de plusieurs profils d’utilisateurs.
+➢ Administrateur
+Le système doit permettre à l’Administrateur de :
+    • Gérer les comptes utilisateurs via une authentification sécurisée (email et mot de passe) à travers l’API Laravel ;
+    • Créer, modifier et supprimer les informations relatives au parc automobile Mandrindra (immatriculation, marque, modèle, année et kilométrage) ;
+    • Gérer les chauffeurs et leur statut de disponibilité ;
+    • Paramétrer les stations-service partenaires utilisées pour le ravitaillement du parc Mandrindra ;
+    • Superviser et sécuriser les jetons d’accès API (tokens) afin de garantir la protection des données et des échanges entre le Frontend React et le Backend Laravel.
+➢ Gestionnaire de Parc / Logistique
+Le système doit permettre au Gestionnaire de Parc de :
+    • Affecter des missions de transport à un binôme chauffeur–véhicule du parc Mandrindra, en précisant l’objet de la mission, le client et l’itinéraire (lieu de départ et d’arrivée) ;
+    • Enregistrer les consommations de carburant, incluant le type de carburant (essence ou gasoil), la quantité, le prix et le téléversement d’un reçu numérisé ;
+    • Suivre les opérations de maintenance en précisant le garage, la nature des interventions effectuées et le coût total ;
+    • Consulter l’historique détaillé des missions, des déplacements et du kilométrage parcouru par chaque véhicule du parc Mandrindra.
 
 3.3. Matériels et technologies nécessaires
-Serveur de base de données : MySQL / MariaDB pour le stockage structuré des données.
-
-Environnement de développement : Framework PHP (Laravel suggéré par la structure des tables migrations et failed_jobs).
-
-Outils de gestion : phpMyAdmin ou HeidiSQL pour l'administration de la base de données.
+Les technologies retenues pour la réalisation du projet sont les suivantes :
+    • Frontend :
+        ◦ React.js pour la création d’une interface utilisateur dynamique, réactive et orientée composants ;
+    • Backend :
+        ◦ Laravel (PHP) pour le développement d’une API RESTful, assurant la logique métier, la sécurité et la gestion des données du parc Mandrindra ;
+    • Serveur de base de données :
+        ◦ MySQL ou MariaDB pour le stockage structuré et sécurisé des informations ;
+    • Outils d’administration :
+        ◦ phpMyAdmin ou HeidiSQL pour la gestion et l’administration de la base de données ;
+    • Environnement de développement :
+        ◦ Serveur local (XAMPP, Laragon ou équivalent) pour le développement et les tests.
 
 3.4. Résultats attendus
-Une réduction significative des erreurs de saisie manuelle et des pertes de documents (reçus de carburant numérisés).
+À l’issue de la mise en œuvre du projet, les résultats attendus sont :
+    • Une réduction significative des erreurs de saisie manuelle et une meilleure conservation des justificatifs grâce à la numérisation des reçus de carburant du parc Mandrindra ;
+    • Une visibilité claire et centralisée des coûts de maintenance par véhicule, facilitant l’anticipation des décisions de renouvellement du parc Mandrindra ;
+    • Une amélioration de la réactivité et de l’efficacité dans l’attribution des missions grâce au suivi en temps réel des véhicules et des chauffeurs ;
+    • Une meilleure sécurité et fiabilité des données, assurée par l’architecture API Laravel et l’interface React.
 
-Une visibilité claire sur les coûts de maintenance par véhicule pour anticiper les renouvellements de parc.
-
-Une amélioration de la réactivité dans l'attribution des missions grâce au suivi en temps réel du statut des chauffeurs et véhicules.
